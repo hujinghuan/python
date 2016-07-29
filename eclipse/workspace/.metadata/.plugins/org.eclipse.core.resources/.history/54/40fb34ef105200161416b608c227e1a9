@@ -1,0 +1,11 @@
+# -*- coding: utf-8 -*-
+import pandas as pd
+import numpy as np
+df = pd.read_excel("sample-salesv3.xlsx")
+print(df.dtypes)
+df['date'] = pd.to_datetime(df['date'])
+print(df.head())
+print(df.dtypes)
+print(df[df["account number"]==307599].head())#筛选account number=307599的记录
+print(df[df["quantity"]>22].head())
+print(df[df["sku"].map(lambda x: x.startswith('B1'))].head())

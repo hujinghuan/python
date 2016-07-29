@@ -1,0 +1,8 @@
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+  
+import csv
+with open('7000F_Order_Price.csv','rb') as f:
+    reader = csv.reader(f)
+for row in reader:
+    print row

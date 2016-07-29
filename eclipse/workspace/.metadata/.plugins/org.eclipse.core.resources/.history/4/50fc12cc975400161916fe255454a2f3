@@ -1,0 +1,36 @@
+# -*- coding: utf-8 -*-'''
+
+from __future__ import print_function
+import patsy
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+import matplotlib.pyplot as plt
+from statsmodels.regression.quantile_regression import QuantReg
+
+data = sm.datasets.engel.load_pandas().data
+print(data.head())
+
+mod = smf.quantreg('foodexp ~ income', data)
+res = mod.fit(q=.5)
+print(res.summary())
+
+quantiles = np.arange(.05, .96, .1)
+def fit_model(q):
+    res = mod.fit(q=q)
+    return [q, res.params['Intercept'], res.params['income']] + \
+            res.conf_int().ix['income'].tolist()
+
+models = [fit_model(x) for x in quantiles]
+models = pd.DataFrame(models, columns=['q', 'a', 'b','lb','ub'])
+
+ols = smf.ols('foodexp ~ income', data).fit()
+ols_ci = ols.conf_int().ix['income'].tolist()
+ols = dict(a = ols.params['Intercept'],
+           b = ols.params['income'],
+           lb = ols_ci[0],
+           ub = ols_ci[1])
+
+print(models)
+print(ols)

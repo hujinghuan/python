@@ -1,0 +1,12 @@
+,,Price,Price,Price,Price,Price,Price,Price,Price,Quantity,Quantity,Quantity,Quantity
+,,mean,mean,mean,mean,sum,sum,sum,sum,len,len,len,len
+Product,,CPU,Maintenance,Monitor,Software,CPU,Maintenance,Monitor,Software,CPU,Maintenance,Monitor,Software
+Manager,Status,,,,,,,,,,,,
+Debra Henley,won,65000,0,0,0,65000,0,0,0,1,0,0,0
+Debra Henley,pending,40000,5000,0,0,40000,10000,0,0,1,2,0,0
+Debra Henley,presented,30000,0,0,10000,30000,0,0,20000,1,0,0,2
+Debra Henley,declined,35000,0,0,0,70000,0,0,0,2,0,0,0
+Fred Anderson,won,82500,7000,0,0,165000,7000,0,0,2,1,0,0
+Fred Anderson,pending,0,5000,0,0,0,5000,0,0,0,1,0,0
+Fred Anderson,presented,30000,0,5000,10000,30000,0,5000,10000,1,0,1,1
+Fred Anderson,declined,65000,0,0,0,65000,0,0,0,1,0,0,0

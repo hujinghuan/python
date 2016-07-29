@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+
+import pandas as pd
+import numpy as np
+from scipy import  stats
+import matplotlib.pyplot as plt
+
+DataFrame=pd.read_csv('e:\Liv-ex Fine Wine Investables Series & Graph.csv')
+
+#vars=['Index']
+#DataFrame=DataFrame[vars]
+
+DataFrame=DataFrame(vars['Index'])
+
+print DataFrame.Index.sum()
+print DataFrame.Index.min() 
+print DataFrame.Index.describe() #这个游泳，计数、平均值、标准差，最大最小值、分位数都有

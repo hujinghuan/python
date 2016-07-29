@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Pythonlean1/src/Python_Mysql_Test/__init__.py&apos; to &apos;Python_Mysql_Test.py&apos;" description="Rename resource &apos;__init__.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Python_Mysql_Test/__init__.py" name="Python_Mysql_Test.py" stamp="1467279819014" updateReferences="true"/>
+</session>

@@ -1,0 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import pandas as pd
+import statsmodels.api as sm
+from patsy import dmatrices
+
+url='http://vincentarelbundock.github.com/Rdatasets/csv/HistData/Guerry.csv'
+df=pd.read_csv(url)
+
+print df.head() #前5条记录
+
+vars=['Department','Lottery','Literacy','Wealth','Region'] #筛选需要的字段
+df=df[vars]
+print df.tail() #后5条记录
+df=df.dropna()

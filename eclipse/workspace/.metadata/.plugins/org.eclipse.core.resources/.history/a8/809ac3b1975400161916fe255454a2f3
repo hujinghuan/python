@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-'''
+
+from __future__ import print_function
+import patsy
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+import matplotlib.pyplot as plt
+from statsmodels.regression.quantile_regression import QuantReg
+
+data = sm.datasets.engel.load_pandas().data
+print(data.head())
+
+mod = smf.quantreg('foodexp ~ income', data)
+res = mod.fit(q=.5)
+print(res.summary())
