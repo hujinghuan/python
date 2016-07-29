@@ -1,4 +1,5 @@
 eclipse.preferences.version=1
+encoding//Finance/finance/__init__.py=utf-8
 encoding//Finance/finance/finance.py=utf-8
 encoding//src/Pandas/Hierarchical_Indexing.py=utf-8
 encoding//src/Pandas/Pandas_Pivot_Table.py=utf-8
