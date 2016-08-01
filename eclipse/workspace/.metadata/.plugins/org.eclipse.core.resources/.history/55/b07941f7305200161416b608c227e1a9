@@ -1,9 +1,0 @@
-# -*- coding: utf-8 -*-
-
-import pandas as pd
-import numpy as np
-from pandas import Series
-from pandas.core.frame import DataFrame
-
-
-DataFrame=Series(np.random.randn(2),index=[0,1])

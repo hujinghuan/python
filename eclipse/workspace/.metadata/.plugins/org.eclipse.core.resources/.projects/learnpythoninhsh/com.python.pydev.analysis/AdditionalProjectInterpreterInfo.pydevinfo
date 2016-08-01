@@ -18,7 +18,7 @@ TimeSeries.__init__|1468999602492|D:\advance\eclipse\workspace\learnpythoninhsh\
 learnurllib.tool|1469173339511|D:\advance\eclipse\workspace\learnpythoninhsh\src\learnurllib\tool.py
 Pandas.merge|1469519645327|D:\advance\eclipse\workspace\learnpythoninhsh\src\Pandas\merge.py
 TimeSeries.SunpotsData|1469070514007|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\SunpotsData.py
-finance.__init__|1469775689149|D:\advance\eclipse\workspace\learnpythoninhsh\Finance\finance\__init__.py
+finance.__init__|1469778151834|D:\advance\eclipse\workspace\learnpythoninhsh\Finance\finance\__init__.py
 Test2.opencsv|1467783857239|D:\advance\eclipse\workspace\learnpythoninhsh\src\Test2\opencsv.py
 TimeSeries.Ordinary_Least_Squares|1469764168148|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\Ordinary_Least_Squares.py
 Test1.__init__|1467644361533|D:\advance\eclipse\workspace\learnpythoninhsh\src\Test1\__init__.py
@@ -70,7 +70,7 @@ TimeSeries.TimeSeries_Arima|1469080122735|D:\advance\eclipse\workspace\learnpyth
 7=TimeSeries.Tim_Series_Filters
 -- END DICTIONARY
 -- START TREE 1
-90
+91
 E|1|E!11@
 M|1|M!11@
 S|1|S!11@
@@ -86,6 +86,7 @@ bas|1|baseURL!83@
 bdt|2|bdtb!83@BDTB!81@
 bet|1|beta!19@
 bk_|1|bk_cycles!59@
+c|1|c!27@
 cnx|3|cnx!91@cnx!99@cnx!107@
 col|1|colors!11@
 con|2|conn!115@conn!123@

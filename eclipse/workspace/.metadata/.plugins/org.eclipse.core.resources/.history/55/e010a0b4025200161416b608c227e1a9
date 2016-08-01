@@ -1,7 +1,0 @@
-# -*- coding: utf-8 -*-
-
-import pandas as pd
-import numpy as np
-
-df = pd.read_excel("excel-comp-data.xlsx")
-print(df.head())

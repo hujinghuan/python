@@ -1,8 +1,0 @@
-# -*- coding: utf-8 -*-
-
-import pandas as pd
-import numpy as np
-from pandas import import Series
-
-
-data=Series(np.random.randn(1000),index=[0:])
