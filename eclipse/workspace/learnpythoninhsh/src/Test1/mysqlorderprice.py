@@ -5,6 +5,7 @@ import numpy as np
 import pylab as pl
 import matplotlib.dates as dt
 from numpy import dtype
+import mysql.connector
 
 
 conn = MySQLdb.connect(host="115.28.2.186",user="hujinghuan",passwd="nY5jRzgBK$fZ$#ts",db="hsh_ver2")

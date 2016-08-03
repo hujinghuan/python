@@ -1,0 +1,53 @@
+#!/usr/bin/python  
+# -*- coding: utf-8 -*-  
+import ftplib  
+import os  
+import socket  
+import sys  
+  
+HOST = '127.0.0.1'  
+DIRN = 'd:\\G'  
+FILE = 'xue.jpg'  
+USER_NAME = 'liyong'  
+PWD = '123456'  
+  
+def DownloadFile(file_name):  
+    try:  
+        f = ftplib.FTP(HOST)  
+    except(socket.error, socket.gaierror) as e:  
+        print('ERROR:cannot reach %s' % HOST)  
+        return  
+    print('*** Connected to host %s' % HOST)  
+  
+    try:  
+        f.login(USER_NAME, PWD)  
+    except ftplib.error_perm:  
+        print('ERROR:cannot login USER_NAME=%s, PWD=%s' % (USER_NAME, PWD))  
+        f.quit()  
+        return  
+    print('*** Logined in as %s' % USER_NAME)  
+  
+    try:  
+        f.cwd(DIRN)  
+    except ftplib.error_perm:  
+        print('ERROR:cannot CD to %s' % DIRN)  
+        f.quit()  
+        return  
+  
+    try:  
+        file = open(file_name, 'wb')  
+        f.retrbinary('RETR %s' % file_name, file.write)  
+        file.close()  
+          
+    except ftplib.error_perm:  
+        print('ERROR:cannot read file %s' % file_name)  
+        os.unlink(file_name)  
+        file.close()  
+    else:  
+        print('*** Downloaded %s to %s' % (file_name, os.getcwd()))  
+    f.quit()  
+    return  
+          
+  
+if __name__ == '__main__':
+    DownloadFile() 

@@ -1,0 +1,24 @@
+# -*- coding: utf-8 -*-
+
+import tushare as ts
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
+from pandas.core.frame import DataFrame
+from pandas.core.series import Series
+
+
+zxb=DataFrame(ts.get_hist_data('zxb'))
+zxb.index = pd.to_datetime(zxb.index)
+zxb.index=pd.date_range('1/1/2014','6/1/2014')
+
+"""
+plt.xlabel('date')
+plt.ylabel('close_price')
+plt.plot(zxb.close,color='red')
+plt.legend()
+plt.show()
+
+#zxb.to_csv('c:/000875.csv')#选择保存
+"""
