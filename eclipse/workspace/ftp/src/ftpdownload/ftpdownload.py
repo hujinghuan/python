@@ -4,7 +4,6 @@
 import os
 import sys
 import ftplib
-import threading
 
 class FTPSync(object):
     def __init__(self):

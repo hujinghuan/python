@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from pandas.core.frame import DataFrame
+
+
+df = pd.DataFrame(np.random.randn(1000, 4), index=ts.index,columns=['A', 'B', 'C', 'D'])
+df = df.cumsum()
+plt.figure(); df.plot(); plt.legend(loc='best')
+<matplotlib.legend.Legend at 0x112854d90>

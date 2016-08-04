@@ -2,20 +2,27 @@
 -- START DISKCACHE
 D:\advance\eclipse\workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\ftp\com.python.pydev.analysis\v2_indexcache
 ftpdownload.__init__|1470195633437|D:\advance\eclipse\workspace\ftp\src\ftpdownload\__init__.py
-ftpdownload.ftpdownload|1470204346235|D:\advance\eclipse\workspace\ftp\src\ftpdownload\ftpdownload.py
-ftpdownload.timer|1470196246348|D:\advance\eclipse\workspace\ftp\src\ftpdownload\timer.py
+ftpdownload.ftpdownload|1470206060068|D:\advance\eclipse\workspace\ftp\src\ftpdownload\ftpdownload.py
 -- END DISKCACHE
 -- START DICTIONARY
-3
-3=ftpdownload.__init__
-2=ftpdownload.ftpdownload
-1=ftpdownload.timer
+4
+2=ftpdownload.__init__
+3=FTPSync
+4=FTPSync.__init__
+1=ftpdownload.ftpdownload
 -- END DICTIONARY
 -- START TREE 1
-2
-fun|3|func!10@func!18@func!26@
-tim|3|timer!27@timer!11@timer!19@
+4
+ftp|1|FTPSync!9@
+fun|1|func!18@
+mai|1|main!10@
+tim|1|timer!19@
 -- END TREE
 -- START TREE 2
-0
+5
+__i|1|__init__!3&10@
+con|1|conn!4&11@
+get|1|get_dirs_files!3&10@
+run|1|run!3&10@
+wal|1|walk!3&10@
 -- END TREE

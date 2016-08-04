@@ -6,7 +6,7 @@ import numexpr as nep#可以执行query语句，并且运算速度快
 df = pd.read_excel("sample-salesv3.xlsx")
 
 print(df.dtypes)
-df['date'] = pd.to_datetime(df['date'])
+df['date'] = pd.to_datetime(df['date'])#改变date的数据格式，从object到datetime
 print(df.head())
 print(df.dtypes)
 print(df[df["account number"]==307599].head())#筛选account number=307599的记录

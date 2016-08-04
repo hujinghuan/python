@@ -461,6 +461,9 @@ ImageWin|D:\Python27\lib\site-packages\PIL\ImageWin.py
 ImtImagePlugin|D:\Python27\lib\site-packages\PIL\ImtImagePlugin.py
 IptcImagePlugin|D:\Python27\lib\site-packages\PIL\IptcImagePlugin.py
 JpegImagePlugin|D:\Python27\lib\site-packages\PIL\JpegImagePlugin.py
+Levenshtein.StringMatcher|D:\Python27\lib\site-packages\Levenshtein\StringMatcher.py
+Levenshtein.__init__|D:\Python27\lib\site-packages\Levenshtein\__init__.py
+Levenshtein._levenshtein|D:\Python27\lib\site-packages\Levenshtein\_levenshtein.pyd
 McIdasImagePlugin|D:\Python27\lib\site-packages\PIL\McIdasImagePlugin.py
 MicImagePlugin|D:\Python27\lib\site-packages\PIL\MicImagePlugin.py
 MimeWriter|D:\Python27\lib\MimeWriter.py

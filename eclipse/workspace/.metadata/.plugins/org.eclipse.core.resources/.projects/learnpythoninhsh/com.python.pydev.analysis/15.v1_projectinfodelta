@@ -1,7 +1,6 @@
-INSTUPTest1.__init__
-D:\advance\eclipse\workspace\learnpythoninhsh\src\Test1\__init__.py
-INFOS:&&3|1|2|0&&3|3|2|0&&3|4|2|0
-cursor=3
-Test1.__init__=2
-query=4
-cnx=1
+INSTUPTimeSeries.predict
+D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\predict.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|1|2|0
+data=1
+dateparse=3
+TimeSeries.predict=2

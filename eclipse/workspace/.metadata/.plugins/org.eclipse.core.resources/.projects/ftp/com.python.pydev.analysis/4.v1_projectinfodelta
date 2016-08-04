@@ -1,12 +1,1 @@
-INSTUPftpdownload.ftpdownload
-D:\advance\eclipse\workspace\ftp\src\ftpdownload\ftpdownload.py
-INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&2|6|2|1&&2|7|2|1&&2|8|2|1&&2|9|2|0
-conn=4
-FTPSync=1
-FTPSync.__init__=5
-ftpdownload.ftpdownload=2
-run=8
-main=9
-__init__=3
-get_dirs_files=6
-walk=7
+DELSTRftpdownload.ftpdownload

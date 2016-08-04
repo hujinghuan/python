@@ -1,8 +1,6 @@
-INSTUPfinance.finance
-D:\advance\eclipse\workspace\learnpythoninhsh\Finance\finance\finance.py
-INFOS:&&3|1|2|0&&2|3|2|0&&3|4|2|0&&3|4|2|0&&3|5|2|0
-finance.finance=2
-names=1
-rets=5
-px=4
-get_px=3
+INSTUPTimeSeries.predict
+D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\predict.py
+INFOS:&&3|1|2|0&&3|3|2|0&&3|1|2|0
+data=1
+dateparse=3
+TimeSeries.predict=2
