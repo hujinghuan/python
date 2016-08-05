@@ -13,8 +13,7 @@ Test1.figtest|D:\advance\eclipse\workspace\learnpythoninhsh\src\Test1\figtest.py
 Test1.mysqlorderprice|D:\advance\eclipse\workspace\learnpythoninhsh\src\Test1\mysqlorderprice.py
 Test1.pandasmyql|D:\advance\eclipse\workspace\learnpythoninhsh\src\Test1\pandasmyql.py
 Test1.test|D:\advance\eclipse\workspace\learnpythoninhsh\src\Test1\test.py
-Test2.createcsv|D:\advance\eclipse\workspace\learnpythoninhsh\src\Test2\createcsv.py
-Test2.opencsv|D:\advance\eclipse\workspace\learnpythoninhsh\src\Test2\opencsv.py
+TimeSeries.7000F.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\7000F\__init__.py
 TimeSeries.Guerry|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\Guerry.py
 TimeSeries.Interactions_and_ANOVA|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\Interactions_and_ANOVA.py
 TimeSeries.Ordinary_Least_Squares|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\Ordinary_Least_Squares.py
@@ -22,8 +21,8 @@ TimeSeries.Quantile_Regression|D:\advance\eclipse\workspace\learnpythoninhsh\src
 TimeSeries.Regression_Plots|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\Regression_Plots.py
 TimeSeries.SunpotsData|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\SunpotsData.py
 TimeSeries.Tim_Series_Filters|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\Tim_Series_Filters.py
-TimeSeries.TimeSeries.Wine|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\TimeSeries\Wine.py
 TimeSeries.TimeSeries.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\TimeSeries\__init__.py
+TimeSeries.TimeSeries.livex|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\TimeSeries\livex.py
 TimeSeries.TimeSeries_Arima|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\TimeSeries_Arima.py
 TimeSeries.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\__init__.py
 TimeSeries.readfiletest|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\readfiletest.py
@@ -31,3 +30,5 @@ finance.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\Finance\finance\_
 finance.finance|D:\advance\eclipse\workspace\learnpythoninhsh\Finance\finance\finance.py
 learnurllib.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\src\learnurllib\__init__.py
 learnurllib.tool|D:\advance\eclipse\workspace\learnpythoninhsh\src\learnurllib\tool.py
+libsvm.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\machinelearning\libsvm\__init__.py
+libsvm.libsvm|D:\advance\eclipse\workspace\learnpythoninhsh\machinelearning\libsvm\libsvm.py

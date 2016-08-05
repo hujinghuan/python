@@ -4897,6 +4897,7 @@ lib2to3.tests.test_parser|D:\Python27\lib\lib2to3\tests\test_parser.py
 lib2to3.tests.test_pytree|D:\Python27\lib\lib2to3\tests\test_pytree.py
 lib2to3.tests.test_refactor|D:\Python27\lib\lib2to3\tests\test_refactor.py
 lib2to3.tests.test_util|D:\Python27\lib\lib2to3\tests\test_util.py
+libsvm|D:\Python27\lib\site-packages\libsvm.dll
 libxml2|D:\Python27\lib\site-packages\libxml2.py
 libxmlmods.__init__|D:\Python27\lib\site-packages\libxmlmods\__init__.py
 libxmlmods.iconv|D:\Python27\lib\site-packages\libxmlmods\iconv.dll
@@ -8518,6 +8519,8 @@ struct|D:\Python27\lib\struct.py
 subprocess|D:\Python27\lib\subprocess.py
 sunau|D:\Python27\lib\sunau.py
 sunaudio|D:\Python27\lib\sunaudio.py
+svm|D:\Python27\lib\site-packages\svm.py
+svmutil|D:\Python27\lib\svmutil.py
 symbol|D:\Python27\lib\symbol.py
 symtable|D:\Python27\lib\symtable.py
 sys

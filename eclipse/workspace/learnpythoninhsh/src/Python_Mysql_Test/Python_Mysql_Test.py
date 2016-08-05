@@ -1,5 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import sys
+reload(sys)
+import matplotlib.pyplot as plt
+sys.setdefaultencoding('utf-8')
+import pandas as pd
+import numpy as np
+from pandas.core.frame import DataFrame
+import xlwt
+
 import datetime
 import mysql.connector
 from locale import currency
@@ -9,19 +18,19 @@ cnx = mysql.connector.connect(user='hujinghuan', password='nY5jRzgBK$fZ$#ts',
                               database='hsh_ver2')
 cursor = cnx.cursor()
 
-query = ("SELECT t.item_no,round(o.order_price,0),DATE_FORMAT(o.updated, '%Y-%m-%d') AS updated,o.currency "
-         "FROM hsh_order o "
-         "INNER JOIN hsh_trade_list t ON (t.id = o.supply_id OR t.id = o.demand_id) "
-         "INNER JOIN hsh_user_title u ON (u.id = o.supply_title_id) "
-         "INNER JOIN hsh_user_title ut ON (ut.id = o.demand_title_id) "
-         "INNER JOIN hsh_product p ON (p.id = o.product_id) "
-         "WHERE t.item_no = '7000F' AND (o.updated >= '2016-01-01') AND u.company_name <> '化塑汇测试' "
-         "ORDER BY o.updated ASC ")
+query = ("SELECT round(IF(hsh_order.order_price>2000,hsh_order.order_price,hsh_order.order_price * 1.065*1.17*6.6+150),2) AS order_price1,DATE_FORMAT(hsh_order.updated, '%Y-%m-%d') AS updated,hsh_product.item_no "
+         "FROM hsh_order "
+         "INNER JOIN hsh_product ON (hsh_product.id = hsh_order.product_id) "
+         "ORDER BY hsh_order.updated ASC ")
 
 cursor.execute(query)
 
-for (item_no,order_price,updated,currency) in cursor: # selection下的变量都要选取到for语句中
-  print("{},{},{}".format(item_no,order_price,updated))
+#fp = open('e:/123.csv','wb'),写入文件
+for (order_price1,updated,item_no) in cursor: # selection下的变量都要选取到for语句中
+    data=("{},{},{}".format(order_price1,updated,item_no))
+    print(data)
+    #fp.write(data)
+    #fp.close
 
 cursor.close()
 
