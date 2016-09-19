@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;learnpythoninhsh/src/Pandas/所有.csv&apos; to &apos;hsh_order.csv&apos;" description="Rename resource &apos;所有.csv&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Pandas/所有.csv" name="hsh_order.csv" stamp="1470905223954" updateReferences="true"/>
+</session>

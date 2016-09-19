@@ -1,1 +1,15 @@
-DELSTRTimeSeries.7000F.__init__
+INSTUPmarkov.__init__
+D:\advance\eclipse\workspace\learnpythoninhsh\machinelearning\markov\__init__.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|7|2|5&&3|8|2|5&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|1
+markov.__init__=2
+cache=4
+triples=10
+generate_markov_text=12
+Markov=1
+words=7
+file_to_words=9
+database=11
+open_file=6
+Markov.__init__=5
+word_size=8
+__init__=3

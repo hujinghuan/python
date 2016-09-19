@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-  
 
-import os
 import sys
-sys.path.append('d:\python27\libsvm-3.21\python');
-os.chdir('d:\python27\libsvm-3.21\python')
+sys.path.append(r'D:\Python27\libsvm-3.21\python')
 from svmutil import *
 
 y,x= svm_read_problem('../heart_scale')

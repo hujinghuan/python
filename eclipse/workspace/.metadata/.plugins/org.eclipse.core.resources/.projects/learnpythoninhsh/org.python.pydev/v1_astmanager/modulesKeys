@@ -2,6 +2,7 @@ MODULES_MANAGER_V2
 Pandas.Hierarchical_Indexing|D:\advance\eclipse\workspace\learnpythoninhsh\src\Pandas\Hierarchical_Indexing.py
 Pandas.Pandas_Pivot_Table|D:\advance\eclipse\workspace\learnpythoninhsh\src\Pandas\Pandas_Pivot_Table.py
 Pandas.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\src\Pandas\__init__.py
+Pandas.hsh_order|D:\advance\eclipse\workspace\learnpythoninhsh\src\Pandas\hsh_order.py
 Pandas.merge|D:\advance\eclipse\workspace\learnpythoninhsh\src\Pandas\merge.py
 Pandas.read&write|D:\advance\eclipse\workspace\learnpythoninhsh\src\Pandas\read&write.py
 Python_Mysql_Test.Python_Mysql_Test|D:\advance\eclipse\workspace\learnpythoninhsh\src\Python_Mysql_Test\Python_Mysql_Test.py
@@ -26,9 +27,11 @@ TimeSeries.TimeSeries.livex|D:\advance\eclipse\workspace\learnpythoninhsh\src\Ti
 TimeSeries.TimeSeries_Arima|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\TimeSeries_Arima.py
 TimeSeries.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\__init__.py
 TimeSeries.readfiletest|D:\advance\eclipse\workspace\learnpythoninhsh\src\TimeSeries\readfiletest.py
+combine_csv.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\src\combine_csv\__init__.py
 finance.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\Finance\finance\__init__.py
 finance.finance|D:\advance\eclipse\workspace\learnpythoninhsh\Finance\finance\finance.py
 learnurllib.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\src\learnurllib\__init__.py
 learnurllib.tool|D:\advance\eclipse\workspace\learnpythoninhsh\src\learnurllib\tool.py
 libsvm.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\machinelearning\libsvm\__init__.py
 libsvm.libsvm|D:\advance\eclipse\workspace\learnpythoninhsh\machinelearning\libsvm\libsvm.py
+markov.__init__|D:\advance\eclipse\workspace\learnpythoninhsh\machinelearning\markov\__init__.py

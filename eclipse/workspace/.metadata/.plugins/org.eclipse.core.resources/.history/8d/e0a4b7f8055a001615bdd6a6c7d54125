@@ -1,8 +1,0 @@
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from pandas.core.frame import DataFrame
-
-
-wine=pd.DataFrame(pd.read_excel('e:\Liv-ex Fine Wine Investables Series & Graph.xls', 'Sheet1',index=None, columns=list('A','B'),na_values=['NA']))
-print(wine)

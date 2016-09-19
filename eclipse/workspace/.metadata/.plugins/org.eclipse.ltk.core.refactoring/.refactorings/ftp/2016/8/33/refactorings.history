@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ftp/src/ftpdownload/Copy of ftpdownload.py&apos; to &apos;Copy file.py&apos;" description="Rename resource &apos;Copy of ftpdownload.py&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/ftpdownload/Copy of ftpdownload.py" name="Copy file.py" stamp="1470820838315" updateReferences="true"/>
+</session>

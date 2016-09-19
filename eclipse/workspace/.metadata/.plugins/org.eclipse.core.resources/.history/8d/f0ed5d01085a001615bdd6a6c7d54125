@@ -1,9 +1,0 @@
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-from pandas.core.frame import DataFrame
-
-
-wine=pd.DataFrame(pd.read_excel('e:\Liv-ex Fine Wine Investables Series & Graph.xls'),columns=['date','index'])
-wine.reindex(wine, index=None, columns=None)
-print(wine)

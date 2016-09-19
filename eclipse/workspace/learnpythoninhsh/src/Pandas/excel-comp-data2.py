@@ -32,7 +32,7 @@ print(df2["2014-Jan-1":"2014-Feb-1"].tail())#这么写当然也可以
 
 print(df[df['sku'].str.contains('B1')].head())#效果与14行命令基本一样，不过范围更广
 
-print(df[(df['sku'].str.contains('B1-531')) & (df['quantity']>40)].sort_values(by=['quantity','name'],ascending=[0,1]))#没有descending命令，[0,1]表示降序，[1,0]表示升序
+print(df[(df['sku'].str.contains('B1-531')) & (df['quantity']>40)].sort_values(by=['quantity','name'],ascending=[0,1]))#没有descending命令，[0]表示降序，[1]表示升序
 
 df["name"].unique()
 """

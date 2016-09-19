@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;learnpythoninhsh/src/combine_csv.py&apos;" deleteContents="false" description="Delete resource &apos;learnpythoninhsh/src/combine_csv.py&apos;" element1="/learnpythoninhsh/src/combine_csv.py" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1473647911355"/>
+</session>
