@@ -1,0 +1,185 @@
+#!/usr/bin/python  
+# -*- coding: utf-8 -*-  
+
+import os
+import sys
+import ftplib
+from  ftplib import FTP
+import time
+import sqlite3
+
+
+DEBUG=False
+INFO_DB=os.path.join( os.getcwd(),"0.db")
+
+
+class InfoDB(object):
+    def __init__(self,db_name=""):
+        self.db_name=db_name
+        self.createTable()
+
+    def createTable( self):
+        if not  os.path.isfile( self.db_name) :
+            with open(self.db_name,"w") as f:
+                f.close()
+        try:
+            conn = sqlite3.connect( self.db_name )
+            # print "Opened database successfully"
+            conn.execute('''CREATE TABLE  IF NOT EXISTS  info
+                           (
+                           file_path_name  CHAR(2000) PRIMARY KEY     NOT NULL,
+
+                           type       CHAR(100) NULL,
+                           size       CHAR(100)   NULL,
+                           modify     CHAR(100) NULL);''')
+
+            conn.execute('''CREATE TABLE  IF NOT EXISTS  info_tmp
+                           (
+                           file_path_name  CHAR(2000) PRIMARY KEY     NOT NULL,
+
+                           type       CHAR(100) NULL,
+                           size       CHAR(100)   NULL,
+                           modify     CHAR(100) NULL);''')
+
+            conn.commit()
+            conn.close()
+            return  True,""
+        except Exception as e:
+            return  False ,e
+
+    def save_to_db(self ,info_list=[]):
+        conn = sqlite3.connect(self.db_name)
+
+        for index, tmp in enumerate(info_list):
+            for k, v in tmp.items():
+                # for pos, t in enumerate(tmp):
+                if isinstance(v, str):
+                    # t_list.append(v.decode("utf-8"))
+                    tmp[k] = v.decode("utf-8")
+            info_list[index] = (tmp["file_path_name"], tmp["type"], tmp["size"], tmp["modify"])
+
+        conn.executemany("INSERT OR REPLACE INTO info_tmp ( file_path_name,type,size,modify) VALUES (?,?,?,?)", info_list)
+        conn.commit()
+
+        sql = '''
+        SELECT   a.file_path_name,a.type,a.size,a.modify
+        FROM     info_tmp  a
+        LEFT OUTER  join info  b
+        on    a.file_path_name = b.file_path_name and  a.modify = b.modify and a.type=b.type and a.size=b.size
+        where b.file_path_name is null
+        '''
+        cursor = conn.execute(sql)
+        rst = cursor.fetchall()
+        conn.executemany("INSERT OR REPLACE INTO info ( file_path_name,type,size,modify) VALUES (?,?,?,?)", rst)
+        conn.commit()
+
+        conn.execute("delete from info_tmp ")
+        conn.commit()
+        conn.close()
+        return  rst
+
+
+class FTPSync(object):
+    def __init__(self):
+
+        if DEBUG:
+            ftp = FTP()
+            timeout = 30
+            port = 21000
+            ftp.connect('192.168.4.66', port, timeout)  # 连接FTP服务器
+            ftp.login('user', '123')  # 登录
+            print ftp.getwelcome()  # 获得欢迎信息
+            # ftp.cwd('test')  # 设置FTP路径
+            # print ftp.retrlines('LIST')  # 列出目录内容
+
+            self.conn = ftp
+            # self.conn.cwd(r'.\voice')  # 远端FTP目录
+            self.conn.cwd('/media/sda/voice')  # 远端FTP目录
+            self.conn.set_debuglevel(1)
+            os.chdir(r'd:\data')  # 本地下载目录
+
+        else:
+            self.conn = ftplib.FTP('192.168.4.66', 'user', '123')
+            self.conn.cwd('/media/sda/voice')  # 远端FTP目录
+            self.conn.set_debuglevel(1)
+            print self.conn.getwelcome()  # 获得欢迎信息
+            os.chdir('c:\data')  # 本地下载目录
+
+        self.DB = InfoDB(INFO_DB)
+
+    def get_dirs_files(self,ftp_curr_dir=""):
+        u''' 得到当前目录和文件, 放入dir_res列表 '''
+        dir_res = []
+        self.conn.dir('.', dir_res.append)
+        files = [f.split(None, 8)[-1] for f in dir_res if f.startswith('-')]
+
+        info_list=[]
+        print  "files=",files
+        for  f in  files:
+            print "f=",f
+            f_time=[]
+            f_time_l=[]
+            try:
+                f_time = self.conn.sendcmd('ls -l %s' % f).split("\n") #MLST
+                f_time_l = f_time[1].split(";")
+            except Exception as e:
+                print "get_dirs_files :",e
+
+            # print  f_time_l
+
+            info_dic={}
+            for  item in  f_time_l:
+                item=item.strip()
+                if  item.startswith("type="):
+                    info_dic["type"]=item.split("=")[1].strip()
+                elif item.startswith("size="):
+                    info_dic["size"] = item.split("=")[1].strip()
+                elif item.startswith("modify="):
+                    info_dic["modify"] = item.split("=")[1].strip()
+            if  f_time_l:
+                info_dic["file_path_name"] =  ftp_curr_dir+"/"+f_time_l[ len(f_time_l)-1].strip()
+            else:
+                info_dic["file_path_name"] = ftp_curr_dir + "/" + f
+            print info_dic.__str__()
+
+            info_list.append(info_dic)
+
+        if  info_list:
+            rst=self.DB.save_to_db(info_list)
+            files=[  os.path.basename( r[0] ) for r in rst]
+            # print  files
+
+        dirs = [f.split(None, 8)[-1] for f in dir_res if f.startswith('d')]
+        return (files, dirs)
+
+    def walk(self, next_dir):
+        print 'Walking to', next_dir
+        self.conn.cwd(next_dir)
+        try:
+            os.mkdir(next_dir)
+        except OSError:
+            pass
+        os.chdir(next_dir)
+        ftp_curr_dir = self.conn.pwd()
+        local_curr_dir = os.getcwd()
+        files, dirs = self.get_dirs_files( ftp_curr_dir)
+        print "FILES: ", files
+        print "DIRS: ", dirs
+        for f in files:
+            print next_dir, ':', f
+            outf = open(f, 'wb')
+            try:
+                self.conn.retrbinary('RETR %s' % f, outf.write)
+            finally:
+                outf.close()
+        for d in dirs:
+            os.chdir(local_curr_dir)
+            self.conn.cwd(ftp_curr_dir)
+            self.walk(d)
+    def run(self):
+        self.walk('.')
+def main():
+    f = FTPSync()
+    f.run()
+if __name__ == '__main__':
+    main()
